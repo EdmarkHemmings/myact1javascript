@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Change image</title>
+<style>
+body, html {
+    height: 120%;
+    margin: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/originals/49/55/b1/4955b1e72cbdc0fdd323beb70d8ba483.gif);
+}
+
+ img {
+    max-width: 20vh;
+ }
+
+ .toggle{
+    text-decoration: none;
+    font-size: x-large;
+   border-width: 3px;
+   margin-bottom: 500px;
+   position: fixed;
+ }
+</style>
+
+
+
+</head>
+<body>
+    <img id="Image" src="happy.jpg" alt="happy">
+    <button class="toggle" onclick="toggleImage()">Change Image</button>
+     <script>
+        function toggleImage(){
+            var image = document.getElementById('Image');
+            if(image.src.includes('happy.jpg')) {
+            image.src = 'sad.png';
+        } else {
+            image.src ='happy.jpg';
+        }
+    }
+
+     </script>
+</body>
+
